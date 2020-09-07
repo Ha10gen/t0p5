@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style type="text/css">
+        body {
+            font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic", sans-serif;
+        }
+        
+        p.button {
+            width: 200px;
+            text-align: center;
+            margin: 10px 0px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <script>
+        var Sw = 0;
+
+        function Switcher() {
+            switch (Sw) {
+                case 0:
+                    Sw = 1;
+                    break;
+                case 1:
+                    Sw = 2;
+                    break;
+                case 2:
+                    Sw = 3;
+                    break;
+                case 3:
+                    Sw = 0;
+                    break;
+            }
+        }
+
+        function s0() {
+            switch (Sw) {
+                case 0:
+                    document.getElementById("s0").play();
+                    document.getElementById("s0").currentTime = 0;
+                    break;
+                case 1:
+                    document.getElementById("s2").play();
+                    document.getElementById("s2").currentTime = 0;
+                    break;
+                case 2:
+                    document.getElementById("s4").play();
+                    document.getElementById("s4").currentTime = 0;
+                    break;
+                case 3:
+                    document.getElementById("s6").play();
+                    document.getElementById("s6").currentTime = 0;
+                    break;
+            }
+
+        }
+
+        function s1() {
+            switch (Sw) {
+                case 0:
+                    document.getElementById("s1").play();
+                    document.getElementById("s1").currentTime = 0;
+                    break;
+                case 1:
+                    document.getElementById("s3").play();
+                    document.getElementById("s3").currentTime = 0;
+                    break;
+                case 2:
+                    document.getElementById("s5").play();
+                    document.getElementById("s5").currentTime = 0;
+                    break;
+                case 3:
+                    document.getElementById("s7").play();
+                    document.getElementById("s7").currentTime = 0;
+                    break;
+            }
+        }
+
+        function s2() {
+            switch (Sw) {
+                case 0:
+                    document.getElementById("s9").play();
+                    document.getElementById("s9").currentTime = 0;
+                    break;
+                case 1:
+                    Sw = 2;
+                    break;
+                case 2:
+                    Sw = 3;
+                    break;
+                case 3:
+                    document.getElementById("s8").play();
+                    document.getElementById("s8").currentTime = 0;
+                    break;
+            }
+        }
+
+        function s3() {
+            switch (Sw) {
+                case 0:
+                    Sw = 1;
+                    break;
+                case 1:
+
+                    break;
+                case 2:
+                    Sw = 0;
+                    break;
+                case 3:
+                    Sw = 0;
+                    break;
+            }
+        }
+    </script>
+    <!-- TOWN-0 PHASE-5 -->
+    <!--0-->
+    <audio id="s0" preload="auto">
+        <source src="sound/s0.mp3" type="audio/mp3">
+        <source src="sound/s0.wav" type="audio/wav">
+    </audio>
+    <audio id="s1" preload="auto">
+        <source src="sound/s1.mp3" type="audio/mp3">
+        <source src="sound/s1.wav" type="audio/wav">
+    </audio>
+    <audio id="s2" preload="auto">
+        <source src="sound/s2.mp3" type="audio/mp3">
+        <source src="sound/s2.wav" type="audio/wav">
+    </audio>
+    <audio id="s3" preload="auto">
+        <source src="sound/s3.mp3" type="audio/mp3">
+        <source src="sound/s3.wav" type="audio/wav">
+    </audio>
+    <audio id="s4" preload="auto">
+        <source src="sound/s4.mp3" type="audio/mp3">
+        <source src="sound/s4.wav" type="audio/wav">
+    </audio>
+    <audio id="s5" preload="auto">
+        <source src="sound/s5.mp3" type="audio/mp3">
+        <source src="sound/s5.wav" type="audio/wav">
+    </audio>
+    <audio id="s6" preload="auto">
+        <source src="sound/s6.mp3" type="audio/mp3">
+        <source src="sound/s6.wav" type="audio/wav">
+    </audio>
+    <audio id="s7" preload="auto">
+        <source src="sound/s7.mp3" type="audio/mp3">
+        <source src="sound/s7.wav" type="audio/wav">
+    </audio>
+    <audio id="s8" preload="auto">
+        <source src="sound/s8.mp3" type="audio/mp3">
+        <source src="sound/s8.wav" type="audio/wav">
+    </audio>
+    <audio id="s9" preload="auto">
+        <source src="sound/s9.mp3" type="audio/mp3">
+        <source src="sound/s9.wav" type="audio/wav">
+    </audio>
+    <p class="button">
+        <input type="button" onclick="s0();" value="    ボタン1| s0 | s2 | s4 | s6 |    " accesskey="1" />
+        <br>
+        <input type="button" onclick="s1();" value="    ボタン2| s1 | s3 | s5 | s7 |    " accesskey="2" />
+        <br>
+        <input type="button" onclick="s2();" value="    ボタン3| s9 | e2 | e3 | s8 |    " accesskey="3" />
+        <br>
+        <input type="button" onclick="s3();" value="    ボタン4| e1 | nu | e0 | e0 |    " accesskey="4" />
+        <br>
+    </p>
+    </div>
+</body>
+
+</html>
