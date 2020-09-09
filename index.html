@@ -42,6 +42,45 @@
             }
         }
 
+        window.onload = function() {
+            setVolume(0.1);
+            document.getElementById("s0").value = 0.1;
+            document.getElementById("s1").value = 0.1;
+            document.getElementById("s2").value = 0.1;
+            document.getElementById("s3").value = 0.1;
+            document.getElementById("s4").value = 0.1;
+            document.getElementById("s5").value = 0.1;
+            document.getElementById("s6").value = 0.1;
+            document.getElementById("s7").value = 0.1;
+            document.getElementById("s8").value = 0.1;
+            document.getElementById("s9").value = 0.1;
+        }
+
+        function setVolume($volume) {
+            var $elementReference0 = document.getElementById("s0");
+            $elementReference0.volume = $volume;
+            var $elementReference1 = document.getElementById("s1");
+            $elementReference1.volume = $volume;
+            var $elementReference2 = document.getElementById("s2");
+            $elementReference2.volume = $volume;
+            var $elementReference3 = document.getElementById("s3");
+            $elementReference3.volume = $volume;
+            var $elementReference4 = document.getElementById("s4");
+            $elementReference4.volume = $volume;
+            var $elementReference5 = document.getElementById("s5");
+            $elementReference5.volume = $volume;
+            var $elementReference6 = document.getElementById("s6");
+            $elementReference6.volume = $volume;
+            var $elementReference7 = document.getElementById("s7");
+            $elementReference7.volume = $volume;
+            var $elementReference8 = document.getElementById("s8");
+            $elementReference8.volume = $volume;
+            var $elementReference9 = document.getElementById("s9");
+            $elementReference9.volume = $volume;
+            var $volume = $elementReference0.volume;
+            document.getElementById("OutputVolume").innerHTML = $volume;
+        }
+
         function s0() {
             switch (Sw) {
                 case 0:
@@ -121,49 +160,13 @@
             }
         }
     </script>
-    <!-- TOWN-0 PHASE-5 -->
-    <!--0-->
-    <audio id="s0" preload="auto">
-        <source src="sound/s0.mp3" type="audio/mp3">
-        <source src="sound/s0.wav" type="audio/wav">
-    </audio>
-    <audio id="s1" preload="auto">
-        <source src="sound/s1.mp3" type="audio/mp3">
-        <source src="sound/s1.wav" type="audio/wav">
-    </audio>
-    <audio id="s2" preload="auto">
-        <source src="sound/s2.mp3" type="audio/mp3">
-        <source src="sound/s2.wav" type="audio/wav">
-    </audio>
-    <audio id="s3" preload="auto">
-        <source src="sound/s3.mp3" type="audio/mp3">
-        <source src="sound/s3.wav" type="audio/wav">
-    </audio>
-    <audio id="s4" preload="auto">
-        <source src="sound/s4.mp3" type="audio/mp3">
-        <source src="sound/s4.wav" type="audio/wav">
-    </audio>
-    <audio id="s5" preload="auto">
-        <source src="sound/s5.mp3" type="audio/mp3">
-        <source src="sound/s5.wav" type="audio/wav">
-    </audio>
-    <audio id="s6" preload="auto">
-        <source src="sound/s6.mp3" type="audio/mp3">
-        <source src="sound/s6.wav" type="audio/wav">
-    </audio>
-    <audio id="s7" preload="auto">
-        <source src="sound/s7.mp3" type="audio/mp3">
-        <source src="sound/s7.wav" type="audio/wav">
-    </audio>
-    <audio id="s8" preload="auto">
-        <source src="sound/s8.mp3" type="audio/mp3">
-        <source src="sound/s8.wav" type="audio/wav">
-    </audio>
-    <audio id="s9" preload="auto">
-        <source src="sound/s9.mp3" type="audio/mp3">
-        <source src="sound/s9.wav" type="audio/wav">
-    </audio>
+
     <p class="button">
+        <p>
+            音量調整：
+            <input type="range" value="0.5" id="testVolume" min="0" max="1" step="0.1" onchange="setVolume(this.value)">
+        </p>
+        <p>音量：<span id="OutputVolume"></span></p>
         <input type="button" onclick="s0();" value="    ボタン1| s0 | s2 | s4 | s6 |    " accesskey="1" />
         <br>
         <input type="button" onclick="s1();" value="    ボタン2| s1 | s3 | s5 | s7 |    " accesskey="2" />
@@ -172,6 +175,48 @@
         <br>
         <input type="button" onclick="s3();" value="    ボタン4| e1 | nu | e0 | e0 |    " accesskey="4" />
         <br>
+        <!-- TOWN-0 PHASE-5 -->
+        <!--0-->
+        <audio id="s0" preload="auto" controls>
+            <source src="sound/s0.mp3" type="audio/mp3">
+            <source src="sound/s0.wav" type="audio/wav">
+        </audio>
+        <audio id="s1" preload="auto" controls>
+            <source src="sound/s1.mp3" type="audio/mp3">
+            <source src="sound/s1.wav" type="audio/wav">
+        </audio>
+        <audio id="s2" preload="auto" controls>
+            <source src="sound/s2.mp3" type="audio/mp3">
+            <source src="sound/s2.wav" type="audio/wav">
+        </audio>
+        <audio id="s3" preload="auto" controls>
+            <source src="sound/s3.mp3" type="audio/mp3">
+            <source src="sound/s3.wav" type="audio/wav">
+        </audio>
+        <audio id="s4" preload="auto" controls>
+            <source src="sound/s4.mp3" type="audio/mp3">
+            <source src="sound/s4.wav" type="audio/wav">
+        </audio>
+        <audio id="s5" preload="auto" controls>
+            <source src="sound/s5.mp3" type="audio/mp3">
+            <source src="sound/s5.wav" type="audio/wav">
+        </audio>
+        <audio id="s6" preload="auto" controls>
+            <source src="sound/s6.mp3" type="audio/mp3">
+            <source src="sound/s6.wav" type="audio/wav">
+        </audio>
+        <audio id="s7" preload="auto" controls>
+            <source src="sound/s7.mp3" type="audio/mp3">
+            <source src="sound/s7.wav" type="audio/wav">
+        </audio>
+        <audio id="s8" preload="auto" controls>
+            <source src="sound/s8.mp3" type="audio/mp3">
+            <source src="sound/s8.wav" type="audio/wav">
+        </audio>
+        <audio id="s9" preload="auto" controls>
+            <source src="sound/s9.mp3" type="audio/mp3">
+            <source src="sound/s9.wav" type="audio/wav">
+        </audio>
     </p>
     </div>
 </body>
